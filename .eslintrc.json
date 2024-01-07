@@ -1,0 +1,24 @@
+{
+    "extends": ["airbnb-base", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto",
+                "singleQuote": true,
+                "tabWidth": 4
+            }
+        ],
+        // "semi": ["warn", "always"],
+        // "quotes": ["warn", "single"],
+        "linebreak-style": 0,
+        "no-console": "off",
+        "no-mixed-spaces-and-tabs": "off"
+    }
+    // "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "[javascript]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // },
+    // "editor.formatOnSave": true
+}
