@@ -82,6 +82,7 @@ const seachFunction = (() => {
                 const result = document.createElement('p');
                 result.addEventListener('click', () => {
                     input.value = item;
+                    showData(input.value);
                     hideResults();
                 });
                 result.innerHTML = item;
