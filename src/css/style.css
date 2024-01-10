@@ -22,10 +22,15 @@ header {
     align-items: center;
     gap: 10px;
     padding: 15px 30px;
+    position: relative;
 }
 
 .search {
-    position: relative;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -91,6 +96,7 @@ header {
     border-left: 1px solid;
     border-right: 1px solid;
     border-bottom: 1px solid;
+    border-radius: 0 0 8px 8px;
     bottom: -20px;
     padding: 5px;
     display: none;
@@ -160,5 +166,9 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .search {
+        top: 70px;
     }
 }
