@@ -170,5 +170,6 @@ header {
 
     .search {
         top: 70px;
+        right: auto;
     }
 }
