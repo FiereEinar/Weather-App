@@ -1,9 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Montserrat&family=Noto+Sans:wght@200&family=Nunito+Sans:opsz,wght@6..12,200&family=Open+Sans&family=Poppins&family=Roboto:wght@100&family=Signika+Negative:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
-    color: red;
+body {
+    min-height: 100vh;
+    background-image: url(../assets/bg6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 200px;
+}
+
+.moreInfo {
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.moreInfo::after {
+    content: 'You can search for more cities, just make sure the format and spelling is correct (country, city). Or you can just search the country.';
+    display: none;
+    padding: 5px;
+    width: 200px;
+    background-color: lightsalmon;
+    border-radius: 5px;
+}
+
+.moreInfo:hover {
+    background-color: lightsalmon;
+}
+
+.moreInfo:hover::after {
+    display: flex;
+}
+
+.search > .submit {
+    cursor: pointer;
+    position: absolute;
+    /* justify-self: flex-end; */
+    right: 5px;
+    top: 3px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 1px;
+    object-fit: cover;
+    object-position: center;
+    /* top: 0; */
+}
+
+.search > input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.searchResults {
+    font-size: 0.8rem;
+    width: 100%;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    bottom: -20px;
+    padding: 5px;
+    display: none;
+}
+
+.showSearchResults {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchResults > p {
+    cursor: pointer;
+    padding: 3px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.searchResults > p:hover {
+    background-color: lightsalmon;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    justify-content: space-around;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aside > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.aside > div > img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+@media (max-width: 440px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main > h2 {
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
